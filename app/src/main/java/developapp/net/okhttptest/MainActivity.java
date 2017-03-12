@@ -98,15 +98,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //POST
     private void postTest(){
         RequestBody formBody = new FormBody.Builder()
-                .add("tokyo", "130010")
-                .add("osaka", "270000")
-                .add("name", "nanashinogonbei")
-                .add("action", "hoge")
-                .add("value", "fuga")
+//                .add("tokyo", "130010")
+//                .add("osaka", "270000")
+//                .add("name", "nanashinogonbei")
+//                .add("action", "hoge")
+//                .add("value", "fuga")
+                .add("id","gest")
+                .add("password","12345")
+//                .add("name","hoge")
                 .build();
 
         final Request request = new Request.Builder()
-                .url("http://www.muryou-tools.com/test/aaaa.php")
+//                .url("http://www.muryou-tools.com/test/aaaa.php")
+                .url("https://rest-test-snowpooll.c9users.io/rest_test.php")
                 .post(formBody)
                 .build();
         OkHttpClient client = new OkHttpClient();
